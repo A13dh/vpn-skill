@@ -1,0 +1,11 @@
+node_modules/
+npm-debug.log*
+*.log
+.env
+.env.*
+!.env.example
+*.ovpn
+*.conf.bak
+.DS_Store
+.vscode/
+.idea/

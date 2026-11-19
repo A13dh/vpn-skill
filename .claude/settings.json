@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/vpn.mjs status*)",
+      "Bash(node scripts/vpn.mjs list*)",
+      "Bash(node scripts/vpn.mjs help*)",
+      "Bash(node --check scripts/vpn.mjs*)",
+      "Bash(node --check mcp/server.mjs*)"
+    ]
+  }
+}

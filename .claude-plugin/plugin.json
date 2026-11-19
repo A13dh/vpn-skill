@@ -1,0 +1,11 @@
+{
+  "name": "vpn-skill",
+  "description": "Teach coding agents to manage VPN connections safely with WireGuard, OpenVPN, Tailscale, or Windows built-in VPN.",
+  "version": "1.0.0",
+  "author": {
+    "name": "A13dh"
+  },
+  "repository": "https://github.com/A13dh/vpn-skill",
+  "license": "MIT",
+  "keywords": ["vpn", "agent-skills", "wireguard", "openvpn", "tailscale", "mcp", "claude-code", "opencode"]
+}

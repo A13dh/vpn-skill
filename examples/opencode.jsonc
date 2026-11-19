@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugins": ["./plugins/vpn"],
+  "permissions": [
+    {
+      "action": "vpn_status",
+      "effect": "allow"
+    },
+    {
+      "action": "vpn_list",
+      "effect": "allow"
+    },
+    {
+      "action": "vpn_connect",
+      "effect": "ask"
+    },
+    {
+      "action": "vpn_disconnect",
+      "effect": "ask"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "vpn-skill",
+  "owner": {
+    "name": "A13dh"
+  },
+  "plugins": [
+    {
+      "name": "vpn-skill",
+      "source": "./",
+      "description": "Safe, explicit-request-only VPN control for coding agents",
+      "version": "1.0.0"
+    }
+  ]
+}

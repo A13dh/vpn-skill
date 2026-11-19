@@ -1,0 +1,30 @@
+{
+  "name": "vpn-skill",
+  "version": "1.0.0",
+  "description": "Portable agent skill + CLI + plugins + MCP server for safe VPN control",
+  "type": "module",
+  "license": "MIT",
+  "author": "A13dh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A13dh/vpn-skill.git"
+  },
+  "keywords": [
+    "vpn",
+    "agent-skills",
+    "opencode",
+    "claude-code",
+    "mcp",
+    "wireguard",
+    "openvpn",
+    "tailscale"
+  ],
+  "scripts": {
+    "vpn": "node scripts/vpn.mjs",
+    "mcp": "node mcp/server.mjs",
+    "check": "node --check scripts/vpn.mjs && node --check mcp/server.mjs"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "latest"
+  }
+}
