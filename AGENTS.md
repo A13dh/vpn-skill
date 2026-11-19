@@ -2,10 +2,16 @@
 
 Portable instructions for coding agents (Codex, Cursor, Gemini CLI, OpenCode, Claude Code, and similar).
 
+## Installed from a repo link?
+
+If the user gave you this repo URL and asked you to **install this skill**, read [`INSTALL.md`](INSTALL.md) first. Clone the repo and run `node scripts/install.mjs --target "<target-project>" --agent all`. Never overwrite existing files; report what was installed and skipped.
+
 ## What this repo is
 
 A safe, explicit-request-only capability for controlling VPN connections on the machine where the agent runs. It contains:
 
+- `INSTALL.md` — agent-facing install guide
+- `scripts/install.mjs` — one-command installer
 - `skills/vpn/SKILL.md` — the portable skill
 - `scripts/vpn.mjs` — dependency-free CLI (the actual implementation)
 - `.opencode/plugins/vpn/index.ts` — OpenCode tool plugin

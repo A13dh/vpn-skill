@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "vpn": "node scripts/vpn.mjs",
+    "install:skill": "node scripts/install.mjs",
     "mcp": "node mcp/server.mjs",
     "check": "node --check scripts/vpn.mjs && node --check mcp/server.mjs"
   },

@@ -6,6 +6,10 @@ This file provides guidance to Claude Code when working in this repository.
 
 `vpn-skill` is a portable agent skill for controlling VPN connections. It is designed to be Claude Code native: it ships a `.claude-plugin/plugin.json`, a `skills/vpn/SKILL.md`, and this `CLAUDE.md`.
 
+## When a user shares this repo link and says "install this skill"
+
+Follow [`INSTALL.md`](INSTALL.md). In short: clone the repo, then run `node scripts/install.mjs --target "<target-project>" --agent all` (or `--agent claude` for Claude Code only). Never overwrite existing config. Report what was installed, what was skipped, and that no VPN client is bundled.
+
 ## Commands
 
 ```sh

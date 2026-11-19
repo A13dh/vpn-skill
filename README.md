@@ -17,6 +17,8 @@ It supports four backends through one dependency-free CLI:
 
 A skill file is instructions. This repo packages the full stack:
 
+- `INSTALL.md` — agent-facing install guide for link-based installs
+- `scripts/install.mjs` — one-command installer (`--target`, `--agent`, `--dry-run`)
 - `skills/vpn/SKILL.md` — portable instructions for any agent
 - `scripts/vpn.mjs` — the real implementation (Node.js, zero dependencies)
 - `.opencode/plugins/vpn/index.ts` — OpenCode tools (`vpn_status`, `vpn_list`, `vpn_connect`, `vpn_disconnect`) with permission gating
@@ -25,7 +27,21 @@ A skill file is instructions. This repo packages the full stack:
 - `AGENTS.md` — generic agent rules
 - `perplexity/INSTRUCTIONS.md` — notes for Perplexity Spaces / MCP
 
-## Install
+## Install by link (for agents)
+
+Most users just copy this repo's link and tell their agent **"Install this skill"**. Send:
+
+> Install this skill: https://github.com/A13dh/vpn-skill
+
+The agent should read [`INSTALL.md`](INSTALL.md), clone the repo, and run:
+
+```sh
+node scripts/install.mjs --target "<your-project-dir>" --agent all
+```
+
+`INSTALL.md` is written specifically for agents: it explains target detection, per-agent file placement, permission merging, MCP config, verification, and what to report back. The installer never overwrites existing files.
+
+## Manual install
 
 ### OpenCode
 
@@ -113,8 +129,10 @@ No credentials are ever read, written, or printed by this repo. Secrets remain i
 
 ```sh
 node --check scripts/vpn.mjs
+node --check scripts/install.mjs
 node --check mcp/server.mjs
 node scripts/vpn.mjs help
+node scripts/install.mjs --dry-run --target . --agent all
 printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | node mcp/server.mjs
 ```
 
